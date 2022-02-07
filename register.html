@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="vh-100 bg-image"
+        style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+            <div class="container h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                        <div class="card" style="border-radius: 15px;">
+                            <div class="card-body p-5">
+                                <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+                                <form action="/register" method="post">
+
+                                    <div class="form-outline mb-4">
+                                        <input type="text" id="username" name="username" class="form-control form-control-lg" />
+                                        <label class="form-label" for="form3Example1cg">Username</label>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="text" id="firstname" name="firstname" class="form-control form-control-lg" />
+                                        <label class="form-label" for="form3Example3cg">First Name</label>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="text" id="lastname" name="lastname"
+                                            class="form-control form-control-lg" />
+                                        <label class="form-label" for="form3Example4cg">Last Name</label>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="password" id="password" name="password"
+                                            class="form-control form-control-lg" />
+                                        <label class="form-label" for="form3Example4cdg">Password</label>
+                                    </div>
+
+                                    <div class="form-check d-flex justify-content-center mb-5">
+                                        <input
+                                          class="form-check-input me-2"
+                                          type="checkbox"
+                                          value=""
+                                          id="form2Example3cg"
+                                          onclick="showPass()"
+                                        />
+                                        <label class="form-check-label" for="form2Example3g">
+                                          Show Password
+                                        </label>
+                                      </div>
+
+                                    <div class="d-flex justify-content-center">
+                                        <button type="submit"
+                                            class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                                    </div>
+
+                                </form>
+                                <p class="text-center text-muted mt-5 mb-0">Already have an account? <a
+                                    href="/login" class="fw-bold text-body"><u>Login here</u></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function showPass() {
+            let x = document.getElementById("password");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
+</body>
+
+</html>

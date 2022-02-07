@@ -1,0 +1,28 @@
+{
+  "name": "101253832_lab_test1_chat_app",
+  "version": "1.0.0",
+  "description": "Full Stack Development 2 Lab Test 1 Socket.io Mongodb chat app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CalvinPierce/101253832_lab_test1_chat_app.git"
+  },
+  "keywords": [],
+  "author": "Calvin Pierce",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CalvinPierce/101253832_lab_test1_chat_app/issues"
+  },
+  "homepage": "https://github.com/CalvinPierce/101253832_lab_test1_chat_app#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.17.2",
+    "mongoose": "^6.2.0",
+    "nodemon": "^2.0.15",
+    "socket.io": "^4.4.1"
+  }
+}
