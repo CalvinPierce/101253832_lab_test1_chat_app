@@ -115,6 +115,14 @@ app.get('/room', (req, res) => {
     res.sendFile(__dirname + '/room.html')
 })
 
+
+app.get('/groupMessages', (req, res) => {
+    GroupMessage.find({},(err, messages)=> {
+        console.log(messages)
+      res.send(messages);
+    })
+  })
+
 app.post('/groupMessages', (req, res) => {
     console.log(req.body)
         const msg = {

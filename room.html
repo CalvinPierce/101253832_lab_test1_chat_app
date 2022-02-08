@@ -85,18 +85,25 @@
         }
         socket.emit('messageRoom', messageSend)
         addMessage(messageSend)
+        $.post('/groupMessages', messageSend)
+        getMessages()
     }
 
     function addMessage(message) {
-        $.post('/groupMessages', message)
-        document.getElementById('messages').innerHTML += `<div> Room: ${message.room} <br/> Sender:${message.username} <br/> Message:${message.message} </div>`
+        $("#messages").append(`<div> Room: ${message.room} <br/> Sender:${message.username} <br/> Message:${message.message} <br/></div>`)
+    }
+
+    function getMessages(){
+      $.get('/groupMessages', (msg) => {
+        msg.forEach(addMessage);
+      })
     }
 
     function join() {
         let roomNameHeader = document.getElementById('roomName')
         let roomNameDropdown = document.getElementById('rooms')
         let roomName = roomNameDropdown.options[roomNameDropdown.selectedIndex].value
-        roomNameHeader.innerHTML = "Room:" + roomName
+        roomNameHeader.innerHTML = roomName
         socket.emit('joinRoom', roomName)
     }
 
